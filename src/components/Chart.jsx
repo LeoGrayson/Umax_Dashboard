@@ -21,7 +21,7 @@ export default function Chart({ chartUrl }) {
         });
 
         if (response.status === 200) {
-          const data = response.data.Data;
+          const data = response.data.Data || [];
           setChartData(data.reverse());
           
           // Update categories based on month if available
